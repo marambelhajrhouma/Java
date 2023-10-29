@@ -1,0 +1,20 @@
+package TP3_essai;
+
+public class TestCompte {
+	public static void main(String arg[]) {
+		int n=5;
+		//preparer les refrences des n cases de tableaux
+		Compte[] comptes=new Compte[n];
+		
+		for(int i=0;i<n;i++) {
+			Comptes[i]=new Compte();
+		}
+		
+		System.out.println("les détails des comptes sont: \n");
+		for(int i=0;i<comptes.length;i++) {
+			System.out.println(comptes[i]);
+		}
+	}
+}
+
+	

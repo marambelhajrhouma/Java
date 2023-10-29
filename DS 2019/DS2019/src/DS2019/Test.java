@@ -1,0 +1,22 @@
+package DS2019;
+public class Test {
+    public static void main(String[] args) {
+        BoiteCourrier b = new BoiteCourrier(5);
+        Lettre lettre1 = new Lettre(true, "mmm", 54.9, "A4");
+        Colis colis1 = new Colis(false, "aaa", 43, 6.9);
+        //
+        b.getC()[0] = lettre1;
+        b.getC()[1] = colis1;
+        //
+        // Instantiate other elements in the array
+        b.getC()[2] = new Lettre(true, "address", 30.0, "A3");
+        b.getC()[3] = new Colis(false, "anotherAddress", 20.0, 5.0);
+        b.getC()[4] = new Lettre(false, "someAddress", 15.0, "A4");
+        //
+        System.out.println("le tableau: ");
+        b.affiche();
+        //
+        System.out.println("le montant necessaire pour l affranchir"+b.affranchir());
+        
+    }
+}

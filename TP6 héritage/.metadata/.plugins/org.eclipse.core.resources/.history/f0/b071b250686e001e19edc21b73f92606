@@ -1,0 +1,37 @@
+package EX1;
+
+public class Vendeur extends Salarie{
+	private int vente;
+	private int pvente;
+	
+	public Vendeur(int matricule,String nom ,double anneeR, int vente, int pvente) {
+		super(matricule,nom,anneeR);
+		this.vente=vente;
+		this.pvente=pvente;
+	}
+	
+	//
+	public int getVente() {
+		return vente;
+	}
+	public void setVente(int vente) {
+		this.vente=vente;
+	}
+	
+	public int getPvente() {
+		return pvente;
+	}
+	public void setPvente(int pvente) {
+		this.pvente=pvente;
+	}
+	
+	//
+	public void affiche() {
+		super.affiche();
+		System.out.println("vente: "+vente+" pvente "+pvente);
+	}
+	
+	public double salaire() {
+		return super.salaire()+pvente+vente;
+	}
+}

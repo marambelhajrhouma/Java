@@ -1,0 +1,48 @@
+package EX1;
+
+public class Entreprise {
+	public static void main(String arg[]) {
+		Salarie[] tabSalaire= new Salarie[5];
+		tabSalaire[0]=new Employe(12345,"Walid",2002.0,15,4);
+		tabSalaire[1]=new Vendeur(23445,"Yessine",2007.0,1000,0.1);
+		tabSalaire[2]=new Vendeur(65478,"Nassime",2000.0,700,0.1);
+		tabSalaire[3]=new Employe(87698,"Aymen ",2003.0,19,5);
+		tabSalaire[4]=new Employe(12345,"Khaled",2008.0,7,4);
+		/*
+		//employe
+		System.out.println("******************************** Liste des Employés*****************************");
+		for(int i=0;i<5;i++) {
+			if(tabSalaire[i] instanceof Employe) {
+				tabSalaire[i].affiche();
+			}
+		}
+		//vendeurs
+		System.out.println("********************************** Liste des Vendeurs ***************************");
+		for(int i=0;i<tabSalaire.length;i++) {
+			if(tabSalaire[i] instanceof Vendeur) {
+				tabSalaire[i].affiche();
+			}
+		}	
+		
+		// salarié le plus ancien
+		System.out.println("******************* Nom du salarié le plus ancien dans l'entreprise ********************");
+		Salarie min=tabSalaire[0];
+		for(int i=1;i<tabSalaire.length-1;i++) {
+			if(min.getAnneeR() > tabSalaire[i].getAnneeR()) {
+				min=tabSalaire[i];
+			}
+		}	
+		min.affiche();
+		*/				
+		//a le plus grand salaire
+		System.out.println("****************** Matricule du vendeur disposant du plus grand salaire ****************");
+		Salarie max=tabSalaire[0];
+		for(int i=1;i<tabSalaire.length-1;i++) {
+			if(tabSalaire[i] instanceof Vendeur && tabSalaire[i].salaire()>max.salaire()) {
+				max=tabSalaire[i];
+			}
+		}
+		max.affiche();
+		//t[i] instanceof Employe :retourne vrai si l'objet appartient à cette classe
+	}
+}

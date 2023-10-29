@@ -1,0 +1,11 @@
+package TP3_essai;
+
+public class TestCompte {
+	public static void main(String arg[]) {
+		Personne p=new Personne("maram","bhr","mm");
+		Compte c=new Compte();
+		System.out.println(c);
+	}
+}
+
+	

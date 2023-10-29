@@ -1,0 +1,9 @@
+package EX1;
+
+public class Entreprise {
+	public static void main(String arg[]) {
+		Salarie s= new Salarie(2,"maram",22.3);
+		s.affiche();
+		s.salaire();
+	}
+}

@@ -1,0 +1,64 @@
+package TP5_essai;
+import java.util.Scanner;
+public class Tab {
+	static final int nmax=40;
+	Scanner scanner=new Scanner(System.in);
+	
+	//
+	static void remplir(float t[]) {
+		for(int i=0;i<nmax;i++) {
+			System.out.println("entrer une val dans le tableau \n");
+			t[i]=scanner.nextFloat();
+		}
+	}
+	
+	static void fermer_Scanner() {
+		scanner.close();
+	}
+	
+	static float somme(float t[]) {
+		float s=0;
+		for(int i=0;i<t.length;i++) {
+			s+=t[i];
+		}
+		return s;
+	}
+	
+	static float[] additionner(float t1[],float t2[]) {
+		int i=0;
+		int taille=Math.min(t1.length,t2.length);
+		float[] tres=new float[taille];
+		while(i<t1.length && i<t2.length) {
+			tres[i]=t1[i]-t2[i];
+			i++;
+		}
+		return tres;
+	}
+	
+	static float[] produit(float x, float t[]) {
+		float[] res=new float[t.length];
+		for(int i=0;i<t.length;i++) {
+			res[i]=t[i]*x;
+		}
+		return res;
+	}
+	
+	static void lister(float t[]) {
+		for(int i=0;i<t.length;i++) {
+			System.out.println(t[i] +" ");
+		}
+	}
+	
+	static float moyenne(float m1,float m2) {
+		return m1+m2*2;
+	}
+	
+	static float[] moyenne-etudiants(){
+		float[] tt= new float[];
+		for(int i=0;i<t.lenght;i++) {
+			tt[i]=moyenne()
+		}
+		return tt;
+	}
+}
+

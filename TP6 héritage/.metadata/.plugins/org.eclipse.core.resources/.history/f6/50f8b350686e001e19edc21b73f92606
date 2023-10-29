@@ -1,0 +1,38 @@
+package EX1;
+
+public class Employe extends Salarie {
+	private int hsupp;
+	private int phsupp;
+	
+	public Employe(int matricule,String nom ,double anneeR,int hsupp, int phsupp) {
+		super(matricule,nom ,anneeR);
+		this.hsupp=hsupp;
+		this.phsupp=phsupp;
+	}
+	
+	//
+	public int getHsupp() {
+		return hsupp;
+	}
+	public void setHsupp(int hsupp) {
+		this.hsupp=hsupp;
+	}
+	
+	public int getPhsupp() {
+		return phsupp;
+	}
+	public void setPhsupp(int phsupp) {
+		this.phsupp=phsupp;
+	}
+	
+	//
+	//rq: override: permet au methode d etre reconnu
+	public void affiche() {
+		super.affiche();
+		System.out.println("hsupp: "+hsupp+"phsupp: "+phsupp);
+	}
+	
+	public double salaire() {
+		return super.salaire()+hsupp+phsupp;
+	}
+}

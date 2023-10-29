@@ -1,0 +1,37 @@
+package EX2;
+
+public class Dictionnaire {
+	private int nbmots;
+	private MotDico[] dico;
+	private String nom;
+	
+	//
+	Dictionnaire(String nom,int taille){
+		this.nbmots=0;
+		MotDico[] dico=new MotDico[taille];
+		this.nom=nom;
+	}
+	
+	//
+		//def de mot?
+	public void ajouterMot(MotDico m) {
+		if(nbmots<dico.length) {
+			nbmots++;
+			dico[nbmots]=m;
+		}else {
+			System.out.println("impossible d ajouter un mot!");
+		}
+	}
+	
+	/*public void supprimerMot(String ch) {
+		int i=0,ok=0;
+		while(ok==0 && i<nbmots) {
+			int i=0;
+			if(dico[i]==ch) {
+			
+		}}
+	}*/
+	
+	
+	
+}

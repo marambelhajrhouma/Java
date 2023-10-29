@@ -1,0 +1,49 @@
+package TD;
+
+public class Libraire {
+	private Livre[] liste;
+	private int capacite=20,nb;
+	
+	//
+	public Libraire(int nb) {
+		this.nb=nb;
+		this.liste=new Livre[nb];
+	}
+	
+	public int getNb() {
+		return nb;
+	}
+	
+	public void inventaire() {
+		for(int i=0;i<nb;i++) {
+			System.out.println("livre "+liste[i].toString()+" prix "+liste[i].prix());
+		}
+	}
+	/*
+	public void inventaire(String categ) {
+		for(int i=0;i<nb;i++) {
+			if(liste[i].getClass().getSimpleName().equals(categ)) {
+				System.out.println("livre "+liste[i].toString()+" prix "+liste[i].prix());
+		}}
+	}
+	
+	public void ajoutLiv(Livre liv) {
+		if(nb<capacite) {
+			nb++;
+			liste[nb]=liv;
+		}else {
+			System.out.println("impo d ajouter un livre");
+	}}
+	
+	public void suppLivre(int num) {
+		int i=0,ok=1;
+		do {
+			i++;ok=0;
+		}while(num!=liste[i].getIdentifiant());
+		if(ok==0) {
+			for(int j=i;j<nb;j++) {
+				liste[j]=liste[j+1];
+		}}else {
+			System.out.println("le num est introuvable dans la liste des livres");
+	}}*/
+}

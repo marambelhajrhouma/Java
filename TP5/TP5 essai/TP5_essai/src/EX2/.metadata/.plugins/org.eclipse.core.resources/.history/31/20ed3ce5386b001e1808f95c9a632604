@@ -1,0 +1,33 @@
+package EX2;
+
+public class MotDico {
+	private int num;
+	private String mot;
+	private String def;
+	
+	
+	//
+	public String getMot() {
+		return mot;
+	}
+	
+	public String getDef() {
+		return def;
+	}
+	
+	public void setDef(String s) {
+		this.def=s;
+	}
+	
+	public void setMot (String s) {
+		this.mot=s;
+	}
+	/*
+	public boolean synonyme (MotDico m) {
+		if(getMot==m) {
+			return true;
+		}else {
+			return false;
+		}
+	}*/
+}

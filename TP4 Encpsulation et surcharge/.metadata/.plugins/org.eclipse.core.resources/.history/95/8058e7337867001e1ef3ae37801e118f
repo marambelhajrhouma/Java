@@ -1,0 +1,28 @@
+package TP4;
+
+public class Test {
+	public static void main(String args[]) {
+		AgenceMobiliere ag=new AgenceMobiliere(5);
+		
+		//
+		Vehicule v=new Vehicule("clio","classique",20000,2000);
+		Vehicule w=new Vehicule("Mercedes","Fantôme",60000,2008);
+		Vehicule x=new Vehicule("kia","picanto",35000,2012);
+		
+		ag.ajoutVehicule(v);
+		ag.ajoutVehicule(w);
+		ag.ajoutVehicule(x);
+		/*
+		v.decrisVehicule();
+		w.decrisVehicule();
+		x.decrisVehicule();
+		*/
+		ag.selection("Mercedes");
+
+		
+		ag.selection(40.000);
+		
+		
+		
+	}
+}

@@ -1,0 +1,29 @@
+package TP5_essai;
+import java.util.Scanner;
+
+public class CalculMoyenne {
+	public static void main(String[] args) {
+		Scanner scanner= new Scanner(System.in);
+		int nb;
+		float[] notectrl=new float[nb];
+		float[] noteexam=new float[nb];
+		
+		System.out.println("entrer un nb \n");
+		nb=scanner.nextInt();
+		if(nb<0 || nb> Tab.nmax) {
+			System.out.println("entrer un nb \n");
+			nb=scanner.nextInt();
+		}
+		
+		//remplissage
+		System.out.println("remplir notectrl \n");
+		Tab.remplir(notectrl);
+		System.out.println("\n remplir noteexam \n");
+		Tab.remplir(noteexam);
+		
+		//moyenne
+		
+		
+	}
+	Tab.fermer_Scanner();
+}

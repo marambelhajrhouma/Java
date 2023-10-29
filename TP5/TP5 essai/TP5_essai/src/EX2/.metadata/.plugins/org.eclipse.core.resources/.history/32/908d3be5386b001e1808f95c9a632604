@@ -1,0 +1,24 @@
+package EX2;
+
+public class Dictionnaire {
+	private int nbMots;
+	private MotDico[] dico;
+	private String mot;
+	
+	//
+	Dictionnaire(){
+		this.nbMots=0;
+		MotDico[] dico=new MotDico[nbMots];
+		this.mot=mot;
+	}
+	
+	//
+	public void ajouterMot (MotDico m) {
+		if(nbMots<dico.length) {
+			nbMots++;
+			dico[nbMots]=m;
+		}else {
+			System.out.println("");
+		}
+	}
+}

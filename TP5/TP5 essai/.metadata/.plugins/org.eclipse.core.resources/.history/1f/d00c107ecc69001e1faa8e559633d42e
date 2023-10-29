@@ -1,0 +1,8 @@
+package TP5_essai;
+
+public class Test {
+	public static void main(String arg[]) {
+		float tab[];
+		tab::remplir(tab);
+	}
+}

@@ -1,0 +1,31 @@
+package TP5_essai;
+import java.util.Scanner;
+
+public class Test {
+	private static int nb;
+	public static void main(String[] args) {
+		Scanner scanner= new Scanner(System.in);
+		
+        do {
+            System.out.println("Entrer une val: ");
+            nb = scanner.nextInt();
+        }while (nb < 0 || nb > Tab.getNmax()); 
+        
+        //remplissage
+        System.out.println(" remplir ctrl ");
+        float[] notectrl=new float[nb];
+        
+        Tab.remplir(notectrl);
+		/*System.out.println("remplir exam ");
+		 float[] noteexam=new float[nb];
+		Tab.remplir(noteexam);*/
+		
+		//affichage
+		System.out.println("\n affichage ctrl \n");
+		Tab.lister(notectrl);/*
+		System.out.println("\n affichage exam \n");
+		Tab.lister(noteexam);*/
+		scanner.close();
+        }
+	
+}

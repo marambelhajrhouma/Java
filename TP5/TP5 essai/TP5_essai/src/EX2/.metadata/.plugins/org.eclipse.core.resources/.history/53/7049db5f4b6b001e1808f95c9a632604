@@ -1,0 +1,25 @@
+package EX2;
+
+public class Main {
+	public static void main(String[] args) {
+		Dictionnaire larousse=new Dictionnaire("larousse",5);
+		
+		MotDico a=new MotDico("noir","black");
+		MotDico b=new MotDico("jaune","yellow");
+		MotDico c=new MotDico("rouge","red");
+		
+		larousse.ajouterMot(a);
+		larousse.ajouterMot(b);
+		larousse.ajouterMot(c);
+		/*
+		larousse.affiche();
+		*/
+		int position = larousse.rechercheMot("rouge");
+
+	    if (position != -1) {
+	        System.out.println("Le mot 'rouge' se trouve à la position : " + position);
+	    } else {
+	        System.out.println("Le mot 'rouge' n'existe pas dans le dictionnaire.");
+	    }
+	}
+}

@@ -1,0 +1,33 @@
+package TP5_essai;
+import java.util.Scanner;
+
+public class Test {
+	private static int nb;
+	public static void main(String[] args) {
+		Scanner scanner= new Scanner(System.in);
+		
+        System.out.println("Entrez un nombre :");
+        nb = scanner.nextInt();
+
+        if (nb < 0 || nb > Tab.nmax) {
+            System.out.println("Le nombre doit être entre 0 et " + Tab.nmax + ". Entrez un nombre valide :");
+            nb = scanner.nextInt();
+        }
+        
+        //remplissage
+        float[] notectrl=new float[nb];
+        float[] noteexam=new float[nb];
+        System.out.println(" remplir ctrl ");
+		Tab.remplir(notectrl);
+		System.out.println("remplir exam ");
+		Tab.remplir(noteexam);
+		
+		/*//affichage
+		System.out.println("\n affichage ctrl \n");
+		Tab.lister(notectrl);
+		System.out.println("\n affichage exam \n");
+		Tab.lister(noteexam);
+		scanner.close();*/
+		
+	}
+}

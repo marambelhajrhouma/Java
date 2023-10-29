@@ -1,0 +1,19 @@
+package EX2;
+
+public class Main {
+	public static void main(String[] args) {
+		Dictionnaire larousse=new Dictionnaire("larousse",5);
+		
+		MotDico a=new MotDico("noir","black");
+		MotDico b=new MotDico("jaune","yellow");
+		MotDico c=new MotDico("rouge","red");
+		
+		larousse.ajouterMot(a);
+		larousse.ajouterMot(b);
+		larousse.ajouterMot(c);
+		/*
+		larousse.affiche();
+		*/
+		larousse.rechercheMot("rouge");
+	}
+}

@@ -1,0 +1,13 @@
+package TP3_essai;
+
+public class Personne {
+	private String nom;
+	private String prenom;
+	private double adresse;
+	
+	Personne(String nom,String prenom,double adresse){
+		this.nom=nom;
+		this.prenom=prenom;
+		this.adresse=adresse;
+	}
+}

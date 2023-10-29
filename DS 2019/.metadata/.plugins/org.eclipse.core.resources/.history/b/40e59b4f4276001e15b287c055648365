@@ -1,0 +1,18 @@
+package DS2019;
+
+public class Test {
+	public static void main(String[] args) {
+		BoiteCourrier b=new BoiteCourrier(5);
+		Lettre lettre1= new Lettre(true,"mmm",54.9,"A4");
+		Colis colis1=new Colis(false,"aaa",43,6.9);
+		//
+		b.getC()[0]=lettre1;
+		b.getC()[1]=colis1;
+		//
+		System.out.println("le tableau: ");
+		b.affiche();
+		//
+		/*System.out.println("le montant nécessaire pour l'affranchir");
+		b.affranchir();*/
+	}
+}
