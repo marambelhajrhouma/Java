@@ -1,0 +1,91 @@
+package EX2;
+
+import java.util.Scanner;
+import java.util.Map;
+import java.util.HashMap;
+
+public class Test {
+	public static void main(String arg[]) {
+		Scanner sc = new Scanner(System.in);
+        Annuaire a = new Annuaire();
+        String commande;
+        String com2;
+
+        a.ajouterFichier("+maram", 1, "maram.com");
+        a.ajouterFichier("!farah", 2, "farah.com");
+
+        while (true) {
+            System.out.println("Entrer une commande: ");
+            commande = sc.next();
+            com2 = commande.substring(0, 1); // Utilisation de substring pour obtenir le premier caractère
+
+            if (com2.equals("?")) {
+                String nom = sc.next();
+                a.rechercheFichier(nom);
+            } else if (com2.equals("+")) {
+                String nom = sc.next();
+                int num = sc.nextInt();
+                String adr = sc.next();
+                a.ajouterFichier(nom, num, adr);
+            } else if (com2.equals("!")) {
+                a.afficherFichiers();
+            } else if (com2.equals(".")) {
+                System.out.println("Arrêt du programme");
+                break;
+            } else if (commande.equals("bye")) {
+                sc.close();
+                break;
+            } else {
+                System.out.println("Vous avez entré une valeur incorrecte!");
+            }
+        }
+    }
+}
+
+class Fiche implements Comparable<Fiche> {
+    private String nom;
+    private int num;
+    private String adr;
+
+    public Fiche(String nom, int num, String adr) {
+        this.nom = nom;
+        this.num = num;
+        this.adr = adr;
+    }
+
+    // Getters and Setters
+
+    @Override
+    public int compareTo(Fiche o) {
+        return this.nom.compareTo(o.getNom());
+    }
+}
+
+class Annuaire {
+    private Map<String, Fiche> tab;
+
+    public Annuaire() {
+        tab = new HashMap<>();
+    }
+
+    public void ajouterFichier(String nom, int num, String adr) {
+        Fiche f = new Fiche(nom, num, adr);
+        tab.put(nom, f);
+    }
+
+    public void afficherFichiers() {
+        tab.values().stream()
+                .sorted()
+                .forEach(f -> System.out.println("Nom: " + f.getNom() + ", Numéro: " + f.getNum() + ", Adresse: " + f.getAdr()));
+    }
+
+    public void rechercheFichier(String nom) {
+        Fiche fiche = tab.get(nom);
+
+        if (fiche != null) {
+            System.out.println("Nom: " + fiche.getNom() + ", Numéro: " + fiche.getNum() + ", Adresse: " + fiche.getAdr());
+        } else {
+            System.out.println("Le fichier est introuvable");
+        }
+    }
+}

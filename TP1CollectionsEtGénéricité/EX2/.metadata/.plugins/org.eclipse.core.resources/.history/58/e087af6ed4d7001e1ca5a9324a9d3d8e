@@ -1,0 +1,13 @@
+package EX2;
+
+public class Test {
+	public static void main(String arg[]) {
+		Annuaire a1= new Annuaire();
+		Annuaire a2= new Annuaire();
+
+		Fiche f1= new Fiche("?java",1,"javacom");
+		Fiche f2= new Fiche("!python",2,"pythoncom");
+		
+		a1.tab.put("hello",f1);
+	}
+}
