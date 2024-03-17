@@ -1,0 +1,55 @@
+package application;
+
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Line;
+import javafx.scene.shape.Rectangle;
+
+public class PremierFenetre extends Application {
+    @Override
+    public void start(Stage primaryStage) {
+        Group root = new Group();
+        Scene scene1 = new Scene(root, 400, 300, Color.WHITE); // Use a different variable name
+
+        primaryStage.setTitle("Ma première fenêtre");
+        primaryStage.setScene(scene1);
+
+        // Ajouter une ligne
+        Line ligne = new Line(50, 50, 200, 50);
+        root.getChildren().add(ligne);
+
+        // Ajouter un rectangle
+        Rectangle rectangle = new Rectangle(50, 100, 150, 80);
+        rectangle.setFill(Color.BLUE);
+        root.getChildren().add(rectangle);
+
+        // Ajouter un cercle
+        Circle cercle = new Circle(300, 200, 30);
+        cercle.setFill(Color.RED);
+        root.getChildren().add(cercle);
+
+        GridPane grid = new GridPane();
+        grid.setAlignment(Pos.CENTER);
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(25, 25, 25, 25));
+
+        Scene scene2 = new Scene(grid, 300, 275); // Use a different variable name
+        primaryStage.setScene(scene2);
+
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
